@@ -1,0 +1,3 @@
+The files in this directory are adapted from QwenLM/Qwen3-TTS finetuning
+scripts and remain under the Apache License 2.0. The Easy GUI changes only
+the command-line options, attention fallback and run metadata export.

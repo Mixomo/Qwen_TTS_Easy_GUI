@@ -1,0 +1,111 @@
+# Qwen TTS Easy GUI - publish source and distributive assets only.
+# The application creates the ignored directories on first use.
+
+# -----------------------------------------------------------------------------
+# Project-local runtime and Python environments
+# -----------------------------------------------------------------------------
+/.venv/
+/.runtime/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Test, lint, type-check and coverage output
+/.pytest_cache/
+/.ruff_cache/
+/.mypy_cache/
+/.pyright/
+/.tox/
+/.nox/
+.coverage
+.coverage.*
+/htmlcov/
+
+# Build and packaging output
+/build/
+/dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# -----------------------------------------------------------------------------
+# User data, downloaded models and generated application state
+# -----------------------------------------------------------------------------
+/base_models/
+/models/
+/samples/
+/datasets/
+/projects/
+/training/
+/outputs/
+/loras/
+/instructions/
+/logs/
+/tensorboard/
+
+# Model weights and conditioning artifacts, wherever they are accidentally
+# placed outside the managed directories above.
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.gguf
+*.onnx
+*.prompt
+
+# User audio and generated dataset tables, even if copied to the project root.
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.ogg
+*.jsonl
+*.csv
+*.tsv
+
+# Downloaded archives and native binaries are installed into .runtime instead.
+*.whl
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# TensorBoard and worker logs
+*.log
+events.out.tfevents.*
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Temporary files created by editors, installers and conversion tools
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+
+# Operating-system and editor metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+/.idea/
+/.vscode/
+
+# -----------------------------------------------------------------------------
+# Published files intentionally retained
+# -----------------------------------------------------------------------------
+# Keep the application screenshots and completion chime in the public assets
+# folder. These exceptions document the intended distributive surface.
+!/assets/
+!/assets/*.png
+!/assets/inference_training_done.wav

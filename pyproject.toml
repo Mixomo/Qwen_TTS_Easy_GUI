@@ -1,0 +1,49 @@
+[project]
+name = "qwen-tts-easy-gui"
+version = "0.1.0"
+description = "Qwen3-TTS Easy GUI for reproducible Windows inference and training"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "torch==2.8.0",
+    "torchaudio==2.8.0",
+    "torchvision==0.23.0",
+    "qwen-tts==0.1.1",
+    "faster-qwen3-tts==0.2.5",
+    "gradio==5.49.1",
+    "faster-whisper==1.2.0",
+    "huggingface-hub[hf-xet]>=0.34,<1",
+    "peft>=0.17,<1",
+    "safetensors>=0.5,<1",
+    "soundfile>=0.13",
+    "numpy==2.2.6",
+    "pandas==2.2.3",
+    "scikit-learn>=1.6,<2",
+    "tensorboard>=2.19,<3",
+    "psutil>=7,<8",
+    "librosa>=0.11,<1",
+    "pydub>=0.25,<1",
+    "accelerate==1.12.0",
+    "packaging>=24,<27",
+    "ninja>=1.11,<2",
+    "setuptools>=75,<82",
+    "wheel>=0.45,<1",
+]
+
+[project.optional-dependencies]
+flash-attention = [
+    "flash-attn @ https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3%2Bcu128torch2.8.0cxx11abiFALSE-cp311-cp311-win_amd64.whl ; sys_platform == 'win32' and platform_machine == 'AMD64'",
+]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
