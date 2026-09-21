@@ -9,7 +9,7 @@ A Windows-first application for **Qwen3-TTS**. It combines CustomVoice, VoiceDes
 Clone the repo or download as a .zip file:
 
 ```cmd
-git clone 
+git clone https://github.com/Mixomo/Qwen_TTS_Easy_GUI.git
 ```
 
 Run the installer from the project directory:
